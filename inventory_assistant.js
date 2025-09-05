@@ -12,6 +12,6 @@ const estimatedReorderCost = reorderQuantity * unitCost;
 const reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks;
 console.log(`Item: ${itemName}`);
 console.log(`Weeks of Cover: ${weeksOfCover.toFixed(2)} weeks`);
-console.log(`Reorder Now: ${reorderNow ? "True" : "False"}`);
+console.log(`Reorder Now: ${reorderNow}`);
 console.log(`Recommended Reorder Quantity: ${reorderQuantity}`);
 console.log(`Estimated Reorder Cost: $${estimatedReorderCost.toFixed(2)}`);
