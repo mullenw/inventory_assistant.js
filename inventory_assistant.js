@@ -10,8 +10,10 @@ const stockDeficit = Math.max(0, targetStock - currentStock);
 const reorderQuantity = (currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks) ? Math.ceil(stockDeficit) : 0;
 const estimatedReorderCost = reorderQuantity * unitCost;
 const reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks;
-console.log(`Item: ${itemName}`);
-console.log(`Weeks of Cover: ${weeksOfCover.toFixed(2)} weeks`);
-console.log(`Reorder Now: ${reorderNow}`);
-console.log(`Recommended Reorder Quantity: ${reorderQuantity}`);
-console.log(`Estimated Reorder Cost: $${estimatedReorderCost.toFixed(2)}`);
+console.log(`
+Item: ${itemName}
+Weeks of Cover: ${weeksOfCover.toFixed(2)} weeks
+Reorder Now: ${reorderNow}
+Recommended Reorder Quantity: ${reorderQuantity}
+Estimated Reorder Cost: $${estimatedReorderCost.toFixed(2)}
+`);
